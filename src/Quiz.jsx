@@ -75,7 +75,7 @@ const Quiz = () => {
       selectedAnswer
         ? {
             ...prev,
-            score: prev.score + 5,
+            score: prev.score + quiz.perQuestionScore,
             correctAnswers: prev.correctAnswers + 1,
           }
         : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
@@ -148,7 +148,11 @@ const Quiz = () => {
               </div>
             </div>
           ) : (
-            <Result questions={questions} result={result} />
+            <Result
+              questions={questions}
+              result={result}
+              StartButton={StartButton}
+            />
           )}
         </div>
       )}

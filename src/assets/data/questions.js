@@ -1,109 +1,103 @@
 // Question Types
 // 1. MCQs | Multiple Choice | single
 
-export const quiz = {
-    topic: 'Javascript',
+export const quiz ={
+    topic: 'The Bible',
     level: 'Beginner',
-    totalQuestions: 4,
-    perQuestionScore: 5,
+    totalQuestions: 10,
+    perQuestionScore: 10,
     questions: [
-      {
-        question:
-          'Which function is used to serialize an object into a JSON string in Javascript?',
-        choices: ['stringify()', 'parse()', 'convert()', 'None of the above'],
-        type: 'MCQs',
-        correctAnswer: 'stringify()',
-      },
-      {
-        question:
-          'Which of the following keywords is used to define a variable in Javascript?',
-        choices: ['var', 'let', 'var and let', 'None of the above'],
-        type: 'MCQs',
-        correctAnswer: 'var and let',
-      },
-      {
-        question:
-          'Which of the following methods can be used to display data in some form using Javascript?',
-        choices: [
-          'document.write()',
-          'console.log()',
-          'window.alert',
-          'All of the above',
-        ],
-        type: 'MCQs',
-        correctAnswer: 'All of the above',
-      },
-      {
-        question: 'How can a datatype be declared to be a constant type?',
-        choices: ['const', 'var', 'let', 'constant'],
-        type: 'MCQs',
-        correctAnswer: 'const',
-      },
-    ],
-  }
-
-  export const Newq =()=>{
-   [ {
-      question: '',
-      choices: ['', '', '', ''],
-      type: 'MCQs',
-      correctAnswer: '',
-    },
     {
       question: 'The Gospel of Mark begins with:',
-      choices: ['', '', '', ''],
+      choices: ['John the Baptist\'s birth',
+      'Jesus\' birth',
+      'The angel Gabriel appearing to Mary',
+      'Jesus\' baptism by John'],
       type: 'MCQs',
-      correctAnswer: '',
+      correctAnswer: 'Jesus\' baptism by John',
     },
+    {
+      question: 'John, the forerunner of Jesus, proclaims forgiveness of sins and performs:',
+      choices: ['Circumcisions',
+      'Baptisms',
+       'Weddings',
+      'Miracles'],
+      type: 'MCQs',
+      correctAnswer: 'Baptisms',
+    },
+    {
+     question: 'When Jesus is baptized, the Spirit of God descends on him in the shape of:',
+     choices: ['A dove',
+     'Flames',
+     'Angels',
+     'A sunbeam'],
+     type: 'MCQs',
+     correctAnswer: 'A dove',
+   },
+   {
+     question: 'All of the following figures recognize Jesus in Mark except:',
+     choices: [  ' The demons',
+     ' John the Baptist',
+     ' The Gentile soldier at the cross',
+     ' The reader of the Gospel',],
+     type: 'MCQs',
+     correctAnswer: 'John the Baptist',
+    },
+    {
+      question: 'The phrase \“Jesus\' Passion\” refers to:',
+      choices: [' Jesus\' birth',
+      ' Jesus\' violent actions in the Temple',
+      ' Jesus\' love for humanity',
+      ' Jesus\' suffering'],
+      type: 'MCQs',
+      correctAnswer: ' Jesus\' suffering',
+    },
+    {
+      question: ' According to Mark, the messiah must:',
+      choices: [ ' Suffer and die',
+      ' Preach and baptize',
+      ' Become the high priest',
+      ' Take control of Israel'],
+      type: 'MCQs',
+      correctAnswer: ' Suffer and die',
+    },
+    {
+      question: ' In first-century apocalyptic Judaism, the term “Son of Man” referred to:',
+      choices: [ ' God\'s son',
+      ' A cosmic figure',
+      ' The king',
+      ' The high priest'],
+      type: 'MCQs',
+      correctAnswer: ' A cosmic figure',
+    },
+    {
+      question: 'At Jesus\' trial in Mark, the Sanhedrin charges him with:',
+      choices: [ ' Theft',
+      ' Blasphemy',
+      ' Being empowered by Satan',
+      ' Not observing Sabbath laws'],
+      type: 'MCQs',
+      correctAnswer: ' Blasphemy',
+    },
+    {
+      question: ' In Mark, the Temple curtain rips:',
+      choices: ['At Jesus\' birth',
+      'At Jesus\' trial',
+     'At Jesus\' death',
+      'At Jesus\' resurrection'],
+      type: 'MCQs',
+      correctAnswer: 'At Jesus\' death',
+    },
+    {
+      question: 'The Gospel of Mark was probably written around:',
+      choices: [' 35 - 40 C.E.',
+      ' 45-50 C.E.',
+      ' 55-60 C.E.',
+      ' 65-70 C.E.'],
+      type: 'MCQs',
+      correctAnswer:' 65-70 C.E.',
+    },
+    
+    
   ]
-    `
- a. John the Baptist's birth
- b. Jesus' birth
- c. The angel Gabriel appearing to Mary
- d. Jesus' baptism by John
-John, the forerunner of Jesus, proclaims forgiveness of sins and performs:
- a. Circumcisions
- b. Baptisms
- c. Weddings
- d. Miracles
-When Jesus is baptized, the Spirit of God descends on him in the shape of:
- a. A dove
- b. Flames
- c. Angels
- d. A sunbeam
-All of the following figures recognize Jesus in Mark except:
- a. The demons
- b. John the Baptist
- c. The Gentile soldier at the cross
- d. The reader of the Gospel
-The phrase “Jesus' Passion” refers to:
- a. Jesus' birth
- b. Jesus' violent actions in the Temple
- c. Jesus' love for humanity
- d. Jesus' suffering
-According to Mark, the messiah must:
- a. Suffer and die
- b. Preach and baptize
- c. Become the high priest
- d. Take control of Israel
-In first-century apocalyptic Judaism, the term “Son of Man” referred to:
- a. God's son
- b. A cosmic figure
- c. The king
- d. The high priest
-At Jesus' trial in Mark, the Sanhedrin charges him with:
- a. Theft
- b. Blasphemy
- c. Being empowered by Satan
- d. Not observing Sabbath laws
-In Mark, the Temple curtain rips:
- a. At Jesus' birth
- b. At Jesus' trial
- c. At Jesus' death
- d. At Jesus' resurrection
-The Gospel of Mark was probably written around:
- a. 35 - 40 C.E.
- b. 45-50 C.E.
- c. 55-60 C.E.
- d. 65-70 C.E.`
   }

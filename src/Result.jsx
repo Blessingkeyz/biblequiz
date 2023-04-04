@@ -1,6 +1,8 @@
 import React from "react";
 
 const Result = ({ questions, result }) => {
+  const refresh = () => window.location.reload();
+
   return (
     <div className="result">
       <h3>Result</h3>
@@ -8,7 +10,7 @@ const Result = ({ questions, result }) => {
         Total Question: <span>{questions.length}</span>
       </p>
       <p>
-        Total Score:<span> {result.score}</span>
+        Total Score:<span style={{ fontSize: "30px" }}> {result.score}%</span>
       </p>
       <p>
         Correct Answers:<span> {result.correctAnswers}</span>
@@ -16,6 +18,9 @@ const Result = ({ questions, result }) => {
       <p>
         Wrong Answers:<span> {result.wrongAnswers}</span>
       </p>
+      <div>
+        <button onClick={refresh}>Restart Quiz</button>
+      </div>
     </div>
   );
 };
