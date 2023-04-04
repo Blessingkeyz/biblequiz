@@ -16,6 +16,7 @@ const Quiz = () => {
   });
   const ref = useRef();
   const ref2 = useRef();
+  var counter = useRef();
 
   const StartButton = () => (
     <div className="start_btn">
@@ -28,10 +29,10 @@ const Quiz = () => {
 
   // counter
   let timeValue = 10;
-  let counter;
 
   function startTimer(time) {
-    counter = setInterval(timer, 1000);
+    counter.current = setInterval(timer, 1000);
+    console.log("counter is: ", counter);
     function timer() {
       time--;
       ref.current.textContent = time;
@@ -41,26 +42,22 @@ const Quiz = () => {
         ref.current.textContent = "0" + addZero;
       }
       if (time == 0) {
-        clearInterval(counter);
+        clearInterval(counter.current);
         ref2.current.textContent = "Time Off";
       }
-      activeQuestion !== questions.length - 2
-        ? time == 0
-          ? (clearInterval(counter),
-            setActiveQuestion((prev) => prev + 1),
-            startTimer(timeValue))
-          : // : (setActiveQuestion(0), setShowResult(true))
-            time != 0
-        : setShowResult(true);
+      // activeQuestion !== questions.length - 2
+      //   ? time == 0
+      //     ? (clearInterval(counter),
+      //       setActiveQuestion((prev) => prev + 1),
+      //       startTimer(timeValue))
+      //     : // : (setActiveQuestion(0), setShowResult(true))
+      //       time != 0
+      //   : setShowResult(true);
 
-      // if (activeQuestion !== questions.length - 1 && time == 0) {
+      // if (time == 0 && activeQuestion !== questions.length - 2) {
       //   clearInterval(counter);
       //   setActiveQuestion((prev) => prev + 1);
       //   startTimer(timeValue);
-      // } else {
-      //   setActiveQuestion(0);
-      //   setShowResult(true);
-      //   clearInterval(counter);
       // }
     }
   }
@@ -69,8 +66,9 @@ const Quiz = () => {
     clearInterval(counter);
     startTimer(timeValue);
   };
+
   const onClickNext = () => {
-    clearInterval(counter);
+    clearInterval(counter.current);
     ref2.current.textContent = "Time Left";
     setSelectedAnswerIndex(null);
     setResult((prev) =>
@@ -83,13 +81,13 @@ const Quiz = () => {
         : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
     );
     if (activeQuestion !== questions.length - 1) {
-      clearInterval(counter);
+      clearInterval(counter.current);
       setActiveQuestion((prev) => prev + 1);
       startTimer(timeValue);
     } else {
       setActiveQuestion(0);
       setShowResult(true);
-      clearInterval(counter);
+      clearInterval(counter.current);
     }
   };
 

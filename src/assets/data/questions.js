@@ -43,7 +43,20 @@ export const quiz = {
   }
 
   export const Newq =()=>{
-    `The Gospel of Mark begins with:
+   [ {
+      question: '',
+      choices: ['', '', '', ''],
+      type: 'MCQs',
+      correctAnswer: '',
+    },
+    {
+      question: 'The Gospel of Mark begins with:',
+      choices: ['', '', '', ''],
+      type: 'MCQs',
+      correctAnswer: '',
+    },
+  ]
+    `
  a. John the Baptist's birth
  b. Jesus' birth
  c. The angel Gabriel appearing to Mary
